@@ -1,0 +1,17 @@
+1.  The header file in the library that allows us to use different fixed sizes of integers, 1, 2, 4, 8 bytes
+2.  We know that the pixel is going to be 3 bytes. And the value  of each byte is not more than 255. Using of unsinged 1 byte integer
+uint8_t allows us to save some space and not to go out of the pixel limits. Unsigned 2 and 4 bytes integers uint16_t uint32_t exlude 
+the use of the negative numbers while describing the image sizes etc. biHeight and biWidth could be negative so we are using 4 bytes 
+integer int32_t.
+3.  BYTE - 1 byte, WORD - 2 bytes, DWORD - 4 bytes, LONG - 4 bytes
+4.  BM / 66, 77 (ascii) / 0x42, 0x4D (hex)
+5.  bfSize - the total size of the bmp file. biSize - the size of the BITMAPINFOHEADER
+6.  In negative biHeight the module of biHeight shows the heoght of the image in pixels and the negativity shows the top-down 
+orientation of the  image
+7.  biBitCount
+8.  Can not open the file for reading (fe it doesn't exist) and can not create file for writing (fe there is not enogh memory)
+9.  Because we are reading the code structure by structure, and to recognize structures of different sizes we need to be careful 
+and go 1 by 1
+10. 3
+11. feek() moves the current file pointer position for the given number of bytes
+12. SEEK_CUR is the current position of the pointer
